@@ -97,7 +97,7 @@ cd search.linux
 ```
 
 ### Edit search file 
-- Open "Windows/dist/search.windows/search.file.txt"
+- Open "LinuxProtonVpnCli/dist/search.linux/search.file.txt"
 - The first line must be numeric. Represents the number of pages in which you want to search
 - The rest of the lines are the words or phrases you want to search for separated by line breaks.
 - Example : search.file.txt:
