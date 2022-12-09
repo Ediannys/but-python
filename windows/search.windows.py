@@ -3,7 +3,6 @@ from selenium_stealth import stealth
 from bs4 import BeautifulSoup
 import time
 import subprocess
-from collections import Counter
 
 options = webdriver.ChromeOptions()
 #options.add_argument("start-maximized")
@@ -42,7 +41,7 @@ try:
                         links=[]
                         titles=[]
                         listUrl = []
-                        screen_height=driver.execute_script("return window.screen.height;")
+                        screen_height= 1080
                         queryList.pop(0) 
 
                         for query in queryList:
@@ -71,15 +70,16 @@ try:
                                             driver.get(first)
                                             flagOPenFirst = True
                                             time.sleep(10)
+                                            screen_height= driver.execute_script("return document.body.scrollHeight;")                                           
                                         
-
                                         if flagOPenFirst == True:
-                                            i += 0.1
+                                            i += 0.01
                                             y = screen_height * i
                                             print ("Scrolling down")
                                             driver.execute_script("window.scrollTo(0, {y});".format(y=y))
                                             
-                                            if i >= 10:
+                                            if y >= screen_height:
+                                                time.sleep(10)
                                                 break
                                             
                             except Exception as e:
