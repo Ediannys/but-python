@@ -1,3 +1,10 @@
 /build
 /dist
 search.spec
+windows/dist
+windows/build
+windows/search.windows.spec
+
+linux/dist
+linux/build
+linux/search.linux.spec

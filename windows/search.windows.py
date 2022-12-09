@@ -76,7 +76,7 @@ try:
                                         if flagOPenFirst == True:
                                             i += 0.1
                                             y = screen_height * i
-                                            print ("Scrolling down i==" + i)
+                                            print ("Scrolling down")
                                             driver.execute_script("window.scrollTo(0, {y});".format(y=y))
                                             
                                             if i >= 10:
