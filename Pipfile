@@ -6,6 +6,11 @@ name = "pypi"
 [packages]
 selenium = "*"
 pyinstaller = "*"
+requests = "*"
+bs4 = "*"
+selenium-stealth = "*"
+webdriver-manager = "*"
+config = "*"
 
 [dev-packages]
 
